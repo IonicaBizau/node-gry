@@ -1,0 +1,27 @@
+{
+  "name": "gry",
+  "version": "1.0.0",
+  "description": "A minimalist NodeJS wrapper for the `git` commands. `gry` stands for the Git RepositorY.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-gry.git"
+  },
+  "keywords": [
+    "git",
+    "repository",
+    "nodejs"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-gry/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-gry"
+}
