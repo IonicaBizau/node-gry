@@ -1,6 +1,6 @@
-![](http://i.imgur.com/vPz8gkX.png)
+![GRY](http://i.imgur.com/vPz8gkX.png)
 
-gry
+GRY
 ===
 A minimalist NodeJS wrapper for the `git` commands. `gry` stands for the Git RepositorY.
 
@@ -73,10 +73,7 @@ Creates a commit, providing the `message`.
 ### Return
 - **Gry** The `Gry` intance.
 
-
-
 ## How to contribute
-
 1. File an issue in the repository, using the bug tracker, describing the
    contribution you'd like to make. This will help us to get you started on the
    right foot.
