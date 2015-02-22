@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-gry/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-gry"
+  "homepage": "https://github.com/IonicaBizau/node-gry",
+  "dependencies": {
+    "exec-limiter": "^1.0.0",
+    "ul": "^1.1.0"
+  },
+  "devDependencies": {}
 }
