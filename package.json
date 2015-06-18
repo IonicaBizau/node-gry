@@ -26,7 +26,8 @@
   "homepage": "https://github.com/IonicaBizau/node-gry",
   "dependencies": {
     "exec-limiter": "^2.0.0",
-    "ul": "^5.0.0"
+    "ul": "^5.0.0",
+    "one-by-one": "^2.0.0"
   },
   "blah": {
       "h_img": "http://i.imgur.com/vPz8gkX.png"
