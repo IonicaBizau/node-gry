@@ -28,5 +28,8 @@
     "exec-limiter": "^2.0.0",
     "ul": "^5.0.0"
   },
+  "blah": {
+      "h_img": "http://i.imgur.com/vPz8gkX.png"
+  },
   "devDependencies": {}
 }
