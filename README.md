@@ -13,7 +13,7 @@
 <!-- * * * Thanks! * * *                                                    -->
 <!---------------------------------------------------------------------------->
 
-![gry](http://i.imgur.com/vPz8gkX.png)
+[![gry](http://i.imgur.com/vPz8gkX.png)](#)
 
 # gry [![Donate now][donate-now]][paypal-donations]
 
@@ -57,7 +57,6 @@ OneByOne([
 ], function (err) {
     console.log(err ? "An error appeared: " + err.stack : "Successfully done.");
 });
-
 ```
 
 ## Documentation
@@ -73,11 +72,12 @@ Creates a new `Gry` instance.
 #### Return
 - **Gry** The `Gry` instance.
 
-### `exec(command, callback)`
+### `exec(command, args, callback)`
 Executes a git command in the repository directory.
 
 #### Params
 - **String** `command`: The git command that should be executed in the repository directory.
+- **Array** `args`: An array of options passed to the spawned process. This is optional (if not provided, `exec` will be used instead).
 - **Function** `callback`: The callback function.
 
 #### Return
@@ -116,6 +116,29 @@ Creates a commit, providing the `message`.
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
+## Who uses this
+If you are using this library in one of your projects, add it in this list. :sparkles:
+
+ - [`bloggify`](https://github.com/Bloggify/bloggify-tools)
+
+ - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)
+
+ - [`engine-tools`](https://github.com/jillix/engine-tools) by jillix
+
+ - [`gh-contributions`](https://github.com/IonicaBizau/github-contributions)
+
+ - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
+
+ - [`git-stats`](https://github.com/IonicaBizau/git-stats)
+
+ - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)
+
+ - [`gpm`](https://github.com/IonicaBizau/node-gpm)
+
+ - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)
+
+ - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
+
 ## License
 [KINDLY][license] © [Ionică Bizău][website]–The [LICENSE](/LICENSE) file contains
 a copy of the license.
@@ -125,4 +148,4 @@ a copy of the license.
 [website]: http://ionicabizau.net
 [docs]: /DOCUMENTATION.md
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MG98D7NPFZ3MG
-[donate-now]: http://i.imgur.com/jioicaN.png
+[donate-now]: http://i.imgur.com/6cMbHOC.png
