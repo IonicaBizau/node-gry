@@ -136,7 +136,6 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`gpm`](https://github.com/IonicaBizau/node-gpm)
 
  - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)
-
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
 
 ## License
