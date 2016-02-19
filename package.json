@@ -1,6 +1,6 @@
 {
   "name": "gry",
-  "version": "4.3.1",
+  "version": "5.0.0",
   "description": "A minimalist NodeJS wrapper for the `git` commands. `gry` stands for the Git RepositorY.",
   "main": "lib/index.js",
   "directories": {
