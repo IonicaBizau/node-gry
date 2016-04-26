@@ -1,41 +1,45 @@
+
 [![gry](http://i.imgur.com/vPz8gkX.png)](#)
 
 # gry [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-gry.svg)](https://travis-ci.org/IonicaBizau/node-gry/) [![Version](https://img.shields.io/npm/v/gry.svg)](https://www.npmjs.com/package/gry) [![Downloads](https://img.shields.io/npm/dt/gry.svg)](https://www.npmjs.com/package/gry) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A minimalist NodeJS wrapper for the `git` commands. `gry` stands for the Git RepositorY.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save gry
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
-var Repo = require("gry")
-  , Fs = require("fs")
-  , OneByOne = require("one-by-one")
-  ;
+const Repo = require("gry")
+    , fs = require("fs")
+    , oneByOne = require("one-by-one")
+    ;
 
 // Create the repository
 var myRepo = new Repo("./foo");
-OneByOne([
+oneByOne([
     myRepo.create.bind(myRepo)
-  , function (cb) {
+  , cb => {
         console.log("> Created the repository.");
-        Fs.writeFile("./foo/README", "Hello World!", cb);
+        fs.writeFile("./foo/README", "Hello World!", cb);
     }
-  , function (cb) {
+  , cb => {
         console.log("> Created README.md");
         myRepo.exec("add .", cb);
     }
-  , function (cb) {
+  , cb => {
         console.log("> Added the files.");
         myRepo.commit("Initial commit.", cb);
     }
-  , function (cb) {
+  , cb => {
         console.log("> Created the initial commit.");
         cb();
     }
@@ -44,7 +48,8 @@ OneByOne([
 });
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `Gry(options)`
 Creates a new `Gry` instance.
@@ -98,33 +103,80 @@ Creates a commit, providing the `message`.
 #### Return
 - **Gry** The `Gry` instance.
 
-## How to contribute
+### `pull(options, callback)`
+Runs `git pull`.
+
+#### Params
+- **String** `options`: Additional options passed to the `pull` command.
+- **Function** `callback`: The callback function.
+
+#### Return
+- **Gry** The `Gry` instance.
+
+### `add(options, callback)`
+Runs `git add`.
+
+#### Params
+- **String** `options`: Additional options passed to the `add` command.
+- **Function** `callback`: The callback function.
+
+#### Return
+- **Gry** The `Gry` instance.
+
+### `branch(options, callback)`
+Runs `git branch`.
+
+#### Params
+- **String** `options`: Additional options passed to the `branch` command.
+- **Function** `callback`: The callback function.
+
+#### Return
+- **Gry** The `Gry` instance.
+
+### `checkout(options, callback)`
+Runs `git checkout`.
+
+#### Params
+- **String** `options`: Additional options passed to the `checkout` command.
+- **Function** `callback`: The callback function.
+
+#### Return
+- **Gry** The `Gry` instance.
+
+### `clone(gitUrl, options, callback)`
+Runs `git clone`.
+
+#### Params
+- **String** `gitUrl`: The git url of the repository that should be cloned.
+- **String** `options`: Additional options passed to the `checkout` command.
+- **Function** `callback`: The callback function.
+
+#### Return
+- **Gry** The `Gry` instance.
+
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`bloggify`](https://github.com/Bloggify/bloggify-tools)
 
- - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)
+ - [`bloggify`](https://github.com/Bloggify/bloggify-tools)—A set of tools for Bloggify administration.
+ - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)—Easy way to import a library into CDNJS.
+ - [`engine-tools`](https://github.com/jillix/engine-tools) (by jillix)—Engine Tools library and CLI app.
+ - [`gh-contributions`](https://github.com/IonicaBizau/github-contributions)—A tool that generates a repository which being pushed into your GitHub account creates a nice contributions calendar.
+ - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
+ - [`git-package-json`](https://github.com/IonicaBizau/git-package-json#readme)—Get the package.json contents from git repositories.
+ - [`git-stats`](https://github.com/IonicaBizau/git-stats)—Local git statistics including GitHub-like contributions calendars.
+ - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)—Imports your commits from a repository into git-stats history.
+ - [`gpm`](https://github.com/IonicaBizau/gpm)—npm + git = gpm - Install NPM packages and dependencies from git repositories.
+ - [`np-init`](https://github.com/IonicaBizau/np-init#readme)—Easily start a npm package from scratch.
+ - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
+ - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
 
- - [`engine-tools`](https://github.com/jillix/engine-tools) by jillix
-
- - [`gh-contributions`](https://github.com/IonicaBizau/github-contributions)
-
- - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
-
- - [`git-stats`](https://github.com/IonicaBizau/git-stats)
-
- - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)
-
- - [`gpm`](https://github.com/IonicaBizau/gpm)
-
- - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)
-
- - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
