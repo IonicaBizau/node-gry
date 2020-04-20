@@ -16,7 +16,7 @@ oneByOne([
     }
   , cb => {
         console.log("> Created README.md");
-        myRepo.exec("add .", cb);
+        myRepo.exec(['add', '.'], cb);
     }
   , cb => {
         console.log("> Added the files.");
