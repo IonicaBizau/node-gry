@@ -5,9 +5,7 @@
 
 # gry
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/node-gry.svg)](https://travis-ci.org/IonicaBizau/node-gry/) [![Version](https://img.shields.io/npm/v/gry.svg)](https://www.npmjs.com/package/gry) [![Downloads](https://img.shields.io/npm/dt/gry.svg)](https://www.npmjs.com/package/gry) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
-
-<a href="https://www.buymeacoffee.com/H96WwChMy" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/node-gry.svg)](https://travis-ci.org/IonicaBizau/node-gry/) [![Version](https://img.shields.io/npm/v/gry.svg)](https://www.npmjs.com/package/gry) [![Downloads](https://img.shields.io/npm/dt/gry.svg)](https://www.npmjs.com/package/gry)
 
 > A minimalist NodeJS wrapper for the `git` commands. `gry` stands for the Git RepositorY.
 
@@ -43,7 +41,7 @@ oneByOne([
     }
   , cb => {
         console.log("> Created README.md");
-        myRepo.exec("add .", cb);
+        myRepo.exec(['add', '.'], cb);
     }
   , cb => {
         console.log("> Added the files.");
@@ -60,6 +58,8 @@ oneByOne([
 
 
 
+
+
 ## :question: Get Help
 
 There are few ways to get help:
@@ -68,6 +68,7 @@ There are few ways to get help:
  2. For bug reports and feature requests, open issues. :bug:
 
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 
@@ -131,62 +132,6 @@ Creates a commit, providing the `message`.
 #### Return
 - **Gry** The `Gry` instance.
 
-### `pull(options, callback)`
-Runs `git pull`.
-
-#### Params
-
-- **String** `options`: Additional options passed to the `pull` command.
-- **Function** `callback`: The callback function.
-
-#### Return
-- **Gry** The `Gry` instance.
-
-### `add(options, callback)`
-Runs `git add`.
-
-#### Params
-
-- **String** `options`: Additional options passed to the `add` command.
-- **Function** `callback`: The callback function.
-
-#### Return
-- **Gry** The `Gry` instance.
-
-### `branch(options, callback)`
-Runs `git branch`.
-
-#### Params
-
-- **String** `options`: Additional options passed to the `branch` command.
-- **Function** `callback`: The callback function.
-
-#### Return
-- **Gry** The `Gry` instance.
-
-### `checkout(options, callback)`
-Runs `git checkout`.
-
-#### Params
-
-- **String** `options`: Additional options passed to the `checkout` command.
-- **Function** `callback`: The callback function.
-
-#### Return
-- **Gry** The `Gry` instance.
-
-### `clone(gitUrl, options, callback)`
-Runs `git clone`.
-
-#### Params
-
-- **String** `gitUrl`: The git url of the repository that should be cloned.
-- **String** `options`: Additional options passed to the `checkout` command.
-- **Function** `callback`: The callback function.
-
-#### Return
-- **Gry** The `Gry` instance.
-
 
 
 ## :yum: How to contribute
@@ -213,24 +158,6 @@ However, if you get some profit from this or just want to encourage me to contin
 Thanks! :heart:
 
 
-## :dizzy: Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-
- - [`bloggify-tools`](https://github.com/Bloggify/bloggify-tools)—Interactive command line tool to help you win at Bloggify.
- - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)—Easy way to import a library into CDNJS.
- - [`engine-tools`](https://github.com/jillix/engine-tools) (by jillix)—Engine Tools library and CLI app.
- - [`gh-contributions`](https://github.com/IonicaBizau/github-contributions)—A tool that generates a repository which being pushed into your GitHub account creates a nice contributions calendar.
- - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
- - [`git-package-json`](https://github.com/IonicaBizau/git-package-json#readme)—Get the package.json contents from git repositories.
- - [`git-stats`](https://github.com/IonicaBizau/git-stats)—Local git statistics including GitHub-like contributions calendars.
- - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)—Imports your commits from a repository into git-stats history.
- - [`gpm`](https://github.com/IonicaBizau/gpm)—npm + git = gpm - Install NPM packages and dependencies from git repositories.
- - [`machine-ip`](https://github.com/IonicaBizau/machine-ip#readme)—Update your public ip information in a git repository.
- - [`np-init`](https://github.com/IonicaBizau/np-init#readme)—Easily start a npm package from scratch.
- - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
- - [`repository-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
- - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
 
 ## :scroll: License
 
